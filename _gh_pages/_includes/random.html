@@ -1,0 +1,13 @@
+﻿---
+---
+{% for _data in site.data._data %}
+<div class="prod">
+	<a href="{{ _data.url }}&tracking_id=feeling-primey-20">
+		<img src="{{ _data.image }}" style="max-width: 500px;" width="100%" title="{{ _data.title }}" alt="{{ _data.title }}" /><br>
+		{{ _data.title }}<br>
+		{{ _data.rank }}<br>
+		{{ _data.review }}<br>
+		{{ _data.price }}<br>
+	</a>
+</div>
+{% endfor %}

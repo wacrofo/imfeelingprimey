@@ -1,0 +1,151 @@
+---
+layout: default
+title: Random Amazon Product Generator
+description: Experience Amazon Prime like never before & get introduced to new products randomly. Are you feeling Primey? A new shopping experience is waiting for you.
+image: /assets/css/images/fb-share-icon.png
+---
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+li.prod {
+	display: none;
+	list-style: none;
+	padding: 10px;
+	width: 332px;
+	height: 370px;
+	margin: auto;
+	border: 1px solid #ddd;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-wrapper {
+	text-align: center;
+}
+
+img.prod-image {
+	max-width: 200px;
+	margin: 8px;
+}
+
+.copy-wrapper {
+	
+}
+
+a.prod-url-title {
+	color: #0066c0 !important;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+span.prod-title {
+	text-align: left;
+}
+
+span.prod-ranking {
+	font-size: 12px;
+	text-align: left;
+}
+
+span.prod-reviews {
+	font-size: 12px;
+	text-align: left;
+}
+
+span.prod-price {
+	color: #B12704;
+	text-align: left;
+}
+
+.button-wrapper {
+	text-align: center;
+}
+
+.btn-primary {
+	background: #ed9220;
+	border-color: #ca7c1b #be751a #a56616;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #111111;
+	text-transform: inherit;
+	font-size: 14px;
+	letter-spacing: -.3px;
+	font-weight: 400;
+
+}
+
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus {
+	border-color: #ca7c1b #be751a #be751a;
+	box-shadow: 0 0 3px 2px rgba(228, 121, 17, .5);
+	background: #ed9220;
+	color: #111111;
+	font-size: 14px;
+	letter-spacing: -.3px;
+	font-weight: 400;
+}
+
+
+@media (min-width: 768px) {
+	/*Large Images for Desktops*/
+
+
+}
+
+@media (max-width: 767px) {
+	/*Small Images for Mobile*/
+
+
+}
+</style>
+<div class="creative-content">
+	<!-- begin INTRO-->
+	<section style="margin: auto; width: 400px;">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<ul class="randomizer" style="margin-inline-stat:-40px; margin-left: -40px;">
+			<!--{{ site.data._data | sample }}-->
+			{% for _data in site.data._data %}
+			<li class="prod">
+				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
+					<div class="img-wrapper">
+						<img class="prod-image" src="{{ _data.image }}" height="200px" width="200px" title="{{ _data.title }}" alt="{{ _data.title }}" />
+					</div>
+				</a><br>
+				<div class="copy-wrapper">
+					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
+						<span class="prod-title" style="text-align: left;">{{ _data.title }}</span><br>
+					</a>
+					<span class="prod-ranking">{{ _data.ranking }} in category</span><br>
+					<span class="prod-reviews">{{ _data.reviews }}</span><br>
+					<span class="prod-price">{{ _data.price }}</span><br>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="button-wrapper">
+			<button class="primey btn btn-primary">I'm Feeling Primey</button>
+		</div>
+	</section>
+	<!-- end intro-->
+	<!--	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+	<script>
+	$(".randomizer > li").hide();
+	randomItem();
+
+	$("button.primey").click(function() {
+		var lastItems = $(".randomizer > li:visible");
+		randomItem();
+		lastItems.hide();
+	});
+
+	function randomItem() {
+		for (var i = 0; i < 1; i++) {
+			var length = $(".randomizer > li:not(:visible)").length;
+			var random = Math.floor(Math.random() * length);
+			$(".randomizer > li:not(:visible)").eq(random).show();
+		}
+	}
+	/* see https://github.com/katydecorah/unconventional*/
+	/* and https://learn.cloudcannon.com/jekyll/output-json/*/
+	/* https://www.js-tutorials.com/jquery-tutorials/reading-csv-file-using-jquery/ */
+	/* https://thornelabs.net/posts/a-better-way-to-display-random-jekyll-posts-on-page-load-or-refresh-using-jquery-and-json.html */
+	</script>
+</div>
