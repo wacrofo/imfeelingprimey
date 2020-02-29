@@ -9,12 +9,13 @@ image: /assets/css/images/fb-share-icon.png
 li.prod {
 	display: none;
 	list-style: none;
-	padding: 10px;
+	padding: 20px;
 	width: 332px;
-	height: 370px;
+	height: 375px;
 	margin: auto;
 	border: 1px solid #ddd;
 	font-family: Arial, Helvetica, sans-serif;
+	max-width: 70vw;
 }
 
 .img-wrapper {
@@ -22,8 +23,9 @@ li.prod {
 }
 
 img.prod-image {
-	max-width: 200px;
+	width: 200px;
 	margin: 8px;
+	max-width: 50vw;
 }
 
 .copy-wrapper {
@@ -98,7 +100,7 @@ span.prod-price {
 </style>
 <div class="creative-content">
 	<!-- begin INTRO-->
-	<section style="margin: auto; width: 400px;">
+	<section style="margin: auto; width: 400px; max-width: 70vw;">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<ul class="randomizer" style="margin-inline-stat:-40px; margin-left: -40px;">
 			<!--{{ site.data._data | sample }}-->
@@ -106,7 +108,7 @@ span.prod-price {
 			<li class="prod">
 				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
 					<div class="img-wrapper">
-						<img class="prod-image" src="{{ _data.image }}" height="200px" width="200px" title="{{ _data.title }}" alt="{{ _data.title }}" />
+						<img class="prod-image" src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
 					</div>
 				</a><br>
 				<div class="copy-wrapper">
