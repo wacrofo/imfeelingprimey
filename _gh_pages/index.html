@@ -2,7 +2,7 @@
 layout: default
 title: Random Amazon Product Generator
 description: Experience Amazon Prime like never before & get introduced to new products randomly. Are you feeling Primey? A new shopping experience is waiting for you.
-image: /assets/css/images/fb-share-icon.png
+image: /assets/css/images/primey-social.png
 ---
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <style>
@@ -28,9 +28,7 @@ img.prod-image {
 	max-width: 50vw;
 }
 
-.copy-wrapper {
-	
-}
+.copy-wrapper {}
 
 a.prod-url-title {
 	color: #0066c0 !important;
@@ -85,6 +83,21 @@ span.prod-price {
 	font-weight: 400;
 }
 
+.creative-content {
+	position: relative;
+	height: 80vh;
+	padding-bottom: 10vh;
+	padding-top: 51px
+}
+
+section {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
 
 @media (min-width: 768px) {
 	/*Large Images for Desktops*/
@@ -104,6 +117,11 @@ span.prod-price {
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<ul class="randomizer" style="margin-inline-stat:-40px; margin-left: -40px;">
 			<!--{{ site.data._data | sample }}-->
+			<li class="prod">
+				<div class="img-wrapper">
+					<img class="prod-image" src="/assets/css/images/primey-social.png">
+				</div>
+			</li>
 			{% for _data in site.data._data %}
 			<li class="prod">
 				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
