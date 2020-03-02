@@ -11,7 +11,7 @@ li.prod {
 	list-style: none;
 	padding: 20px;
 	width: 332px;
-	height: 400px;
+	height: 370px;
 	margin: auto;
 	border: 1px solid #ddd;
 	font-family: Arial, Helvetica, sans-serif;
@@ -106,24 +106,24 @@ section {
 }
 
 @media (max-width: 767px) {
+
 	/*Small Images for Mobile*/
 	li.prod {
-    display: none;
-    list-style: none;
-    padding: 8px;
-    width: 323px;
-    height: 330px !important;
-    margin: auto;
-    border: none !important;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 70vw;
-}
+		display: none;
+		list-style: none;
+		padding: 8px;
+		width: 323px;
+		height: 330px !important;
+		margin: auto;
+		border: none !important;
+		font-family: Arial, Helvetica, sans-serif;
+		max-width: 70vw;
+	}
 }
 </style>
 <div class="creative-content">
 	<!-- begin INTRO-->
 	<section style="margin: auto; width: 400px; max-width: 70vw;">
-		
 		<ul class="randomizer" style="margin-inline-stat:-40px; margin-left: -40px;">
 			<!--{{ site.data._data | sample }}-->
 			<li class="prod">
@@ -142,7 +142,7 @@ section {
 					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
 						<span class="prod-title" style="text-align: left;">{{ _data.title }}</span><br>
 					</a>
-					<span class="prod-ranking">{{ _data.ranking }} in category</span><br>
+					<!--<span class="prod-ranking">{{ _data.ranking }} in category</span><br>-->
 					<span class="prod-reviews">{{ _data.reviews }}</span><br>
 					<span class="prod-price">{{ _data.price }}</span><br>
 				</div>
