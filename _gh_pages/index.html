@@ -139,19 +139,19 @@ section {
 				</div>
 			</li>
 			{% for _data in site.data._data %}
-			<li class="prod">
+			<li class="prod" itemscope itemtype="http://schema.org/Product">
 				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
 					<div class="img-wrapper">
-						<img class="prod-image lazyload" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
+						<img class="prod-image lazyload" itemprop="image" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
 					</div>
 				</a><br>
 				<div class="copy-wrapper">
-					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
-						<span class="prod-title" style="text-align: left;">{{ _data.title }}</span><br>
+					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank" rel="nofollow">
+						<span class="prod-title" style="text-align: left;" itemprop="name">{{ _data.title }}</span><br>
 					</a>
 					<!--<span class="prod-ranking">{{ _data.ranking }} in category</span><br>-->
-					<span class="prod-reviews">{{ _data.reviews }}</span><br>
-					<span class="prod-price">{{ _data.price }}</span><br>
+					<span class="prod-reviews" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">{{ _data.reviews }}</span><br>
+					<span class="prod-price" itemprop="price">{{ _data.price }}</span><br>
 				</div>
 			</li>
 			{% endfor %}
