@@ -5,4 +5,4 @@ User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
 Disallow: /_template/
-Sitemap: https://www.imfeelingprimey.com/sitemap.xml
+#Sitemap: https://www.imfeelingprimey.com/sitemap.xml
