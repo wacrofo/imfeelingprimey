@@ -4,14 +4,14 @@ title: Random Amazon Product Generator
 description: Experience Amazon Prime like never before & get introduced to new products randomly. Are you feeling Primey? A new shopping experience is waiting for you.
 image: /assets/css/images/primey-social.png
 ---
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script async src="{{ site.baseurl }}/dist/js/min/primey.min.js"></script>
 <style>
 li.prod {
 	display: none;
 	list-style: none;
 	padding: 20px;
 	width: 332px;
-	height: 375px;
+	height: 400px;
 	margin: auto;
 	border: 1px solid #ddd;
 	font-family: Arial, Helvetica, sans-serif;
@@ -114,7 +114,7 @@ section {
 <div class="creative-content">
 	<!-- begin INTRO-->
 	<section style="margin: auto; width: 400px; max-width: 70vw;">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
 		<ul class="randomizer" style="margin-inline-stat:-40px; margin-left: -40px;">
 			<!--{{ site.data._data | sample }}-->
 			<li class="prod">
@@ -126,7 +126,7 @@ section {
 			<li class="prod">
 				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
 					<div class="img-wrapper">
-						<img class="prod-image" src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
+						<img class="prod-image lazyload" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
 					</div>
 				</a><br>
 				<div class="copy-wrapper">

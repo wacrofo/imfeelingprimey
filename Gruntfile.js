@@ -7,9 +7,7 @@ module.exports = function(grunt) {
 			css: {
 				src: ['_gh_pages/assets/css/font-awesome.min.css',
 					'_gh_pages/assets/css/bootstrap.min.css',
-					'_gh_pages/assets/css/full-width.css',
-					'_gh_pages/assets/css/prism.css',
-					'_gh_pages/assets/css/fonts.css'
+					'_gh_pages/assets/css/full-width.css'
 				],
 
 				dest: '_gh_pages/dist/css/primey.css'
@@ -22,6 +20,7 @@ module.exports = function(grunt) {
 					'_gh_pages/assets/js/bootstrap.min.js',
 					'_gh_pages/assets/js/jquery.mobile.custom.min.js',
 					'_gh_pages/assets/js/jquery.smooth-scroll.min.js',
+					'_gh_pages/assets/js/lazysizes.min.js',
 					'_gh_pages/assets/js/site.js'
 				],
 

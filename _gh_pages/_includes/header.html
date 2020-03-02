@@ -8,24 +8,31 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <!--end favicons test-->
-<script>
-</script>
-<!-- async css-->
-<link rel="preload" href="{{ site.baseurl }}/dist/css/min/primey.min.css" as="style" onload="this.rel='stylesheet'">
-<noscript>
-	<link rel="stylesheet" href="{{ site.baseurl }}/dist/css/min/primey.min.css">
-</noscript>
+<style type="text/css">
+#logo-container {
+	background-color: #232f3e;
+}
 
-<!--end async css-->
-<!--<script>
-var cb = function() {
-	var l = document.createElement('link');
-	l.rel = 'stylesheet';
-	l.href = '{{ site.baseurl }}/dist/css/min/primey.min.css';
-	var h = document.getElementsByTagName('head')[0];
-	h.parentNode.insertBefore(l, h);
-};
-var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(cb);
-else window.addEventListener('load', cb);
-</script>-->
+div.logo {
+	padding: 6px 0px;
+	text-align: center;;
+}
+
+img.logo {
+	width: 100%;
+	max-width: 150px;
+	text-align: center;
+	margin: auto;
+}
+</style>
+<div id="logo-container" class="row">
+	<div class="max-1080">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="logo">
+					<img class="logo" src="{{ site.baseurl }}/images/primey-logo-sm.png" width="100%">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
