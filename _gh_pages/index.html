@@ -147,11 +147,14 @@ section {
 				</a><br>
 				<div class="copy-wrapper">
 					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank" rel="nofollow">
-						<span class="prod-title" style="text-align: left;" itemprop="name">{{ _data.title }}</span><br>
+						<span class="prod-title" style="text-align: left;" itemprop="name">{{ _data.title | truncate:42}}</span><br>
 					</a>
-					<!--<span class="prod-ranking">{{ _data.ranking }} in category</span><br>-->
-					<span class="prod-reviews" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">{{ _data.reviews }}</span><br>
-					<span class="prod-price" itemprop="price">{{ _data.price }}</span><br>
+					<span class="prod-ranking">{{ _data.rank }} in {{ _data.topLevelCategory }}</span><br>
+					<span class="prod-reviews" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><strong style="color: #ca7c1b">{{ _data.ratings }}</strong></span> | <span class="prod-reviews" itemprop="reviewCount"><strong>{{ _data.reviewCount }} reviews</strong></span><br>
+					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+						<meta itemprop="priceCurrency" content="USD" />
+						<span class="prod-price" itemprop="price">{{ _data.price }}</span><br>
+					</div>
 				</div>
 			</li>
 			{% endfor %}
