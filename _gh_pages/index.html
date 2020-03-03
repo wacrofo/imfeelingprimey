@@ -116,7 +116,7 @@ section {
 		list-style: none;
 		padding: 8px;
 		width: 323px;
-		height: 350px !important;
+		height: auto !important;
 		margin: auto;
 		border: none !important;
 		font-family: Arial, Helvetica, sans-serif;
@@ -140,9 +140,10 @@ section {
 			</li>
 			{% for _data in site.data._data %}
 			<li class="prod" itemscope itemtype="http://schema.org/Product">
+				<link property="url" href="{{ _data.url }}&tracking_id=feeling-primey-20">
 				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
 					<div class="img-wrapper">
-						<img class="prod-image lazyload" itemprop="image" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
+						<img class="prod-image lazyload" itemprop="image" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
 					</div>
 				</a><br>
 				<div class="copy-wrapper">
@@ -154,6 +155,7 @@ section {
 					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 						<meta itemprop="priceCurrency" content="USD" />
 						<span class="prod-price" itemprop="price">{{ _data.price }}</span><br>
+						<link itemprop="availability" href="http://schema.org/InStock" />
 					</div>
 				</div>
 			</li>
@@ -182,9 +184,5 @@ section {
 			$(".randomizer > li:not(:visible)").eq(random).show();
 		}
 	}
-	/* see https://github.com/katydecorah/unconventional*/
-	/* and https://learn.cloudcannon.com/jekyll/output-json/*/
-	/* https://www.js-tutorials.com/jquery-tutorials/reading-csv-file-using-jquery/ */
-	/* https://thornelabs.net/posts/a-better-way-to-display-random-jekyll-posts-on-page-load-or-refresh-using-jquery-and-json.html */
 	</script>
 </div>
