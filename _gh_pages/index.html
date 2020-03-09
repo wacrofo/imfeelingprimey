@@ -140,14 +140,14 @@ section {
 			</li>
 			{% for _data in site.data._data %}
 			<li class="prod" itemscope itemtype="http://schema.org/Product">
-				<link property="url" href="{{ _data.url }}&tracking_id=feeling-primey-20">
-				<a class="prod-url" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank">
+				<link property="url" href="{{ _data.url }}&tag=feeling-primey-20">
+				<a class="prod-url" href="{{ _data.url }}&tag=feeling-primey-20" target="_blank">
 					<div class="img-wrapper">
 						<img class="prod-image lazyload" itemprop="image" data-src="{{ _data.image }}" title="{{ _data.title }}" alt="{{ _data.title }}" />
 					</div>
 				</a><br>
 				<div class="copy-wrapper">
-					<a class="prod-url-title" href="{{ _data.url }}&tracking_id=feeling-primey-20" target="_blank" rel="nofollow">
+					<a class="prod-url-title" href="{{ _data.url }}&tag=feeling-primey-20" target="_blank" rel="nofollow">
 						<span class="prod-title" style="text-align: left;" itemprop="name">{{ _data.title | truncate:42}}</span><br>
 					</a>
 					<span class="prod-ranking">{{ _data.rank }} in {{ _data.topLevelCategory }}</span><br>
