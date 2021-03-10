@@ -4,8 +4,8 @@
 	<channel>
 		<title>Second Crop Creative Blog RSS</title>
 		<description>Latest blog posts from Second Crop Creative</description>
-		<link>http://localhost:12022/blog</link>
-		<atom:link href="http://localhost:12022/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://imfeelingprimey.com/blog</link>
+		<atom:link href="https://imfeelingprimey.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 	</channel>
 </rss>
